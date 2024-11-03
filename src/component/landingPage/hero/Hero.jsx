@@ -31,17 +31,17 @@ const Hero = () => {
       >
         <div className="text-content">
           <img
-            className=" mix-blend-darken"
-            src="https://i.pinimg.com/564x/e4/3a/cf/e43acf173248479d88f5abc007b8d3b8.jpg"
+            className=" mix-blend-darken w-full xl:w-2/3 "
+            src="https://i.pinimg.com/564x/90/3c/48/903c488ea87e57b9032a70d0f88d0b6f.jpg"
             alt=""
           />
-          <p id="heros" className=" text-zinc-400">
+          <p id="heros" className=" text-zinc-400 md:text-[20vw] text-[5vw]">
             ari fode max
           </p>
         </div>
 
 
-        <div className="social grid grid-cols-3  w-full justify-items-center">
+        <div className="social grid grid-cols-3   w-full justify-items-center">
 
           <button>
             <svg

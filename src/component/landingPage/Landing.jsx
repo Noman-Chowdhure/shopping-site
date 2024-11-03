@@ -1,4 +1,5 @@
 import AboutUs from "./aboutUs/AboutUs";
+import Dummy from "./aboutUs/Dummy";
 import Hero from "./hero/Hero";
 import WinderCollection from "./winterCollection/WinderCollection";
 
@@ -8,6 +9,7 @@ const Landing = () => {
       <Hero></Hero>
       <WinderCollection></WinderCollection>
       <AboutUs></AboutUs>
+      <Dummy></Dummy>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 const WinderCollection = () => {
   return (
-    <div id="windter" className=" w-full h-fit p-10 ">
-      <h1 className=" text-center text-3xl uppercase font-safari ">
+    <div id="windter" className=" w-full h-full p-10 md:py-20">
+      <h1 className=" text-center text-3xl my-10 py-10 md:text-9xl font-semibold  uppercase font-safari ">
         our top popular product for you
       </h1>
 

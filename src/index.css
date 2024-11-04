@@ -51,3 +51,14 @@
   font-weight: bolder;
   z-index: -3;
 }
+
+
+#productCard
+{
+ 
+  background-color: rgba(240, 240, 240, 0.429);
+  padding: 10px;
+  box-shadow: inset 9px 4px 20px 10px rgba(240, 240, 240, 0.341), -7px -5px 12px -2px rgb(185, 185, 185);
+  border-radius: 20px;
+  
+}

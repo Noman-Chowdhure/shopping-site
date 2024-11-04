@@ -4,7 +4,7 @@ import { nav } from "../../utils/frienFunction";
 
 const Navbar = () => {
   const [count, setCount] = useState([]);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   useEffect(() => {}, []);
 
   return (
@@ -31,6 +31,7 @@ const Navbar = () => {
       <div className="nav">
         <div className="navBar">
           <button onClick={() => setOpen(!open)}>
+              {open?
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -44,12 +45,13 @@ const Navbar = () => {
                 strokeLinejoin="round"
                 d="M3.75 9h16.5m-16.5 6.75h16.5"
               />
-            </svg>
+            </svg>:' '}
+
           </button>
 
           <div className={open ? `hidden` : ""}>
             {nav.map((abc) => (
-              <Link to={abc.path} key={abc.id}>
+              <Link className=" ps-6 uppercase font-safari" to={abc.path} key={abc.id}>
                 {abc.nam}
               </Link>
             ))}

@@ -1,6 +1,6 @@
 import Slider from "../shreadPage/Slider";
 import AboutUs from "./aboutUs/AboutUs";
-import Dummy from "./aboutUs/Dummy";
+import Clint from "./clint/Clint";
 import Hero from "./hero/Hero";
 import WinderCollection from "./winterCollection/WinderCollection";
 
@@ -11,7 +11,7 @@ const Landing = () => {
       <WinderCollection></WinderCollection>
       <AboutUs></AboutUs>
       <Slider></Slider>
-      <Dummy></Dummy>
+      <Clint></Clint>
     </div>
   );
 };

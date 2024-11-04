@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 
 const ProductDetils = () => {
-  const data = useLoaderData();
+  
+  const dataInfo = useLoaderData();
   const {
     image,
     color,
@@ -11,15 +12,19 @@ const ProductDetils = () => {
     price,
     category,
     availableColors,
-  } = data;
+  } = dataInfo;
   const handleCart = () => {
     fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
-        "Content-Type": "applicaton/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
-    });
+      body: JSON.stringify(dataInfo),
+    })
+     .then(res => res.json())
+     .then(informat => {
+      console.log(informat)
+     })
   };
   return (
     <div className=" grid grid-cols-2 w-full h-screen justify-center  items-center justify-items-center gap-4 ">

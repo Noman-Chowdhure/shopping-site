@@ -2,6 +2,7 @@ import Slider from "../shreadPage/Slider";
 import AboutUs from "./aboutUs/AboutUs";
 import Clint from "./clint/Clint";
 import Hero from "./hero/Hero";
+import Paster from "./postetPage/Paster";
 import WinderCollection from "./winterCollection/WinderCollection";
 
 const Landing = () => {
@@ -12,6 +13,7 @@ const Landing = () => {
       <AboutUs></AboutUs>
       <Slider></Slider>
       <Clint></Clint>
+      <Paster></Paster>
     </div>
   );
 };

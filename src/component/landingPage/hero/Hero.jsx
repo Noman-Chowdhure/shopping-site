@@ -5,9 +5,11 @@ import LocomotiveScroll from "locomotive-scroll";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { heroImg } from "../../../utils/frienFunction";
 gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [pro, setPro] = useState(0);
+  const [current, setCurretn] = useState(0);
   const locomotiveScroll = new LocomotiveScroll();
   useGSAP(() => {
     gsap.to("#heros", {
@@ -21,6 +23,17 @@ const Hero = () => {
       },
     });
   }, []);
+
+  const nextHead = () => {
+    setCurretn((current) => (current + 1) % heroImg.length); // Add parentheses around current + 1
+    setPro((pro) => pro == 3? 1: pro + 1);
+  };
+  
+  const privious = () => {
+    setCurretn((current) => (current - 1 + heroImg.length) % heroImg.length); // Same here, ensure proper wrapping
+    setPro((pro) => pro == 1? 3: pro - 1);
+  };
+  
   return (
     <div id="hero" className=" w-full h-full">
       <div
@@ -31,18 +44,17 @@ const Hero = () => {
       >
         <div className="text-content">
           <img
-            className=" mix-blend-darken w-full xl:w-2/3 "
-            src="https://i.pinimg.com/564x/90/3c/48/903c488ea87e57b9032a70d0f88d0b6f.jpg"
+            className=" mix-blend-darken w-1/2 m-auto"
+            src={heroImg[current].img}
             alt=""
           />
+
           <p id="heros" className=" text-zinc-400 md:text-[20vw] text-[5vw]">
             ari fode max
           </p>
         </div>
 
-
         <div className="social grid grid-cols-3   w-full justify-items-center">
-
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,14 +72,16 @@ const Hero = () => {
             </svg>
           </button>
 
-
           <div className="more-proudct flex gap-x-10 items-center">
-            <p>{pro}/ 04</p>
-            <Link className=" rounded-full bg-zinc-800 text-white px-5 py-1 capitalize text-xl">
+            <p className=" font-safari">{pro}/ 03</p>
+            <Link
+              to="/product"
+              className=" rounded-full  font-safari bg-zinc-800 text-white px-5 py-1 capitalize text-xl"
+            >
               more product
             </Link>
             <div className="btn">
-              <button onClick={() => setPro((count) => count - 1)}>
+              <button onClick={privious}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -83,9 +97,7 @@ const Hero = () => {
                   />
                 </svg>
               </button>
-              <button
-                onClick={() => setPro((count) => (count === 4 ? 0 : count + 1))}
-              >
+              <button onClick={nextHead}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -103,9 +115,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <Link className=" btnn">
-            buy product
-          </Link>
+          <Link className=" btnn">buy product</Link>
         </div>
       </div>
     </div>

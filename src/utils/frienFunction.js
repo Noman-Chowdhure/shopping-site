@@ -4,6 +4,12 @@ export const nav = [
     {path:'/contact',nam:'contact',id:534}
 ]
 
+export const heroImg = [
+  {id:1,img:'https://i.pinimg.com/736x/80/d8/16/80d8161b021c8c61c2a6f7c3df0b22e3.jpg'},
+  {id:2,img:'https://i.pinimg.com/736x/87/d9/de/87d9de14caba87f607d8e3909a4aba81.jpg'},
+  {id:3,img:'https://i.pinimg.com/736x/04/46/cf/0446cf3a8c6a50a9ecc7de00825b400e.jpg'}
+
+]
 
 export  const arrayOfOj = [
     {

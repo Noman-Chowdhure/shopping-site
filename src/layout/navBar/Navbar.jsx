@@ -5,7 +5,11 @@ import { nav } from "../../utils/frienFunction";
 const Navbar = () => {
   const [count, setCount] = useState([]);
   const [open, setOpen] = useState(false);
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetch('http://localhost:5000/informa')
+     .then(res => res.json())
+     .then(infor => setCount(infor.length))
+  }, []);
 
   return (
     <div className=" absolute z-30 w-full h-fit my-4 grid grid-cols-3 justify-center justify-items-center">
@@ -59,7 +63,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="order_items">
-        <Link>
+        <Link to='/addCart'>
           <p>{count}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

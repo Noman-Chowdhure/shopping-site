@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { clint } from "../../utils/frienFunction";
+import { useState } from "react";
+import { clint } from "../../../utils/frienFunction";
 
 const AboutPro = () => {
   const [next, setItem] = useState(0);

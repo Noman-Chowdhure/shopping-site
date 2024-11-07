@@ -1,21 +1,46 @@
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
-  const { image, rating, name, id } = item;
+  const { image,title, name, id } = item;
   return (
-    <div className=" w-full aspect-square">
-      <div id="productCard">
-        <div className="text-section">
-          <img className=" aspect-square mix-blend-darken" src={image} alt="" />
-          <h1 className=" text-2xl font-safari">{name}</h1>
-          <p className=" text-orange-400">{rating}</p>
-          <Link className=" btnn" to={`/productDetils/${id}`}>
-            go to detils
-          </Link>
-        </div>
+    <Link to={`/productDetils/${id}`}>
+    <div
+
+     
+      className="w-full aspect-auto p-5 rounded-3xl shadow-lg flex"
+    >
+
+      <div className="box">
+        <img
+           id="samar_card" 
+          className=" mix-blend-darken aspect-square object-contain"
+          src={image}
+          alt=""
+        />
+        
+        <p className=" font-safari font-extralight">{name}</p>
+       
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
       </div>
     </div>
+    </Link>
+    
   );
 };
+
+
 
 export default ProductCard;

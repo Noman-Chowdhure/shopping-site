@@ -9,6 +9,25 @@
   @apply border-[1px] border-zinc-700 rounded-full px-5 py-1 
 }
 
+
+#samar_card:hover{
+  scale: 1.1;
+  transition: 1s ease-out;
+
+}
+
+
+#productsHeading
+{
+   text-transform: capitalize;
+   font-weight: 800;
+   color: rgba(225, 225, 225, 0.83);
+   z-index: -2;
+   font-size:20vw;
+   font-family: 'Times New Roman', Times, serif;
+   position: absolute;
+}
+
 #aboutUs
 {
   border-radius: 2%;

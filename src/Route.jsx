@@ -4,6 +4,7 @@ import ProductDetils from "./component/shreadPage/ProductDetils";
 import Layout from "./layout/Layout";
 import AddCart from "./component/cartPage/AddCart";
 import Products from "./component/productsPage/Products";
+import LogIN from "./component/signUp/LogIN";
 
 export const router = createBrowserRouter([
   {
@@ -25,4 +26,8 @@ export const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path:'/login',
+    element:<LogIN></LogIN>
+  }
 ]);

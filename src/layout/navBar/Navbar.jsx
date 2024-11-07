@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className=" absolute z-30 w-full h-fit my-4 grid grid-cols-3 justify-center justify-items-center">
       <div className="login">
-        <Link>
+        <Link to='/login'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

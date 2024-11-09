@@ -1,8 +1,9 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../provider/Provider";
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser } = useAuth();
   const [see, setSee] = useState(false);
   const onSubmit = (data) => {
     data.preventDefault();
@@ -21,8 +22,15 @@ const SignUp = () => {
 
   return (
     <div className="w-full h-screen grid justify-center items-center">
-      <img className=" absolute -z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl w-2/3 h-2/3" src="https://i.pinimg.com/564x/44/0c/ef/440cef314f679adba15d7047c47c3661.jpg" alt="" />
-      <div id="form-body" className="body rounded-3xl w-2/3 h-fit p-24  mx-auto grid grid-cols-2 justify-center justify-items-center items-center gap-6">
+      <img
+        className=" absolute -z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl w-2/3 h-2/3"
+        src="https://i.pinimg.com/564x/44/0c/ef/440cef314f679adba15d7047c47c3661.jpg"
+        alt=""
+      />
+      <div
+        id="form-body"
+        className="body rounded-3xl w-2/3 h-2/3 p-24  mx-auto grid grid-cols-2 justify-center justify-items-center items-center gap-6"
+      >
         <div className="form_section w-full">
           <form
             onSubmit={onSubmit}
@@ -90,10 +98,10 @@ const SignUp = () => {
               className="w-full bg-blue-500 text-white py-2 rounded"
             />
           </form>
-          <Link to='/login'>already hava in accout..</Link>
+          <Link to="/login">already hava in accout..</Link>
         </div>
 
-        <div className="text_section">
+        <div className="text_section ">
           <p>signUP here</p>
           <h1 className=" text-3xl text-orange-300 font-safari  my-5">
             hey! good to see you
@@ -109,6 +117,6 @@ const SignUp = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SignUp
+export default SignUp;

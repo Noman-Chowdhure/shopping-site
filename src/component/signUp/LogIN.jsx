@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../provider/Provider";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
 
 const LogIN = () => {
-  const { signINUser } = useContext(AuthContext);
+  const { signINUser } = useAuth();
   const [see, setSee] = useState(false);
   const onSubmit = (data) => {
     data.preventDefault();
@@ -19,11 +19,20 @@ const LogIN = () => {
         console.log(error);
       });
   };
+ 
+  const {googleLog} = useAuth();
 
   return (
     <div className="w-full h-screen grid justify-center items-center">
-      <img className=" absolute -z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl w-2/3 h-2/3" src="https://i.pinimg.com/564x/44/0c/ef/440cef314f679adba15d7047c47c3661.jpg" alt="" />
-      <div id="form-body" className="body rounded-3xl w-2/3 h-fit p-24  mx-auto grid grid-cols-2 justify-center justify-items-center items-center gap-6">
+      <img
+        className=" absolute -z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl w-2/3 h-2/3"
+        src="https://i.pinimg.com/564x/44/0c/ef/440cef314f679adba15d7047c47c3661.jpg"
+        alt=""
+      />
+      <div
+        id="form-body"
+        className="body rounded-3xl w-2/3 h-fit p-24  mx-auto grid grid-cols-2 justify-center justify-items-center items-center gap-6"
+      >
         <div className="form_section w-full">
           <form
             onSubmit={onSubmit}
@@ -91,7 +100,7 @@ const LogIN = () => {
               className="w-full bg-blue-500 text-white py-2 rounded"
             />
           </form>
-          <Link to='/signUp'>dont.t have any accout yet..</Link>
+          <Link to="/signUp">dont.t have any accout yet..</Link>
         </div>
 
         <div className="text_section">
@@ -106,6 +115,7 @@ const LogIN = () => {
             eyeing, we’ve got it all waiting for you. Let’s make today the day
             you discover your next favorite thing!
           </p>
+           <button onClick={()=>googleLog()}>google</button>
         </div>
       </div>
     </div>

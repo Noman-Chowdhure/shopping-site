@@ -26,25 +26,27 @@ const SliderCard = ({ nam, index,nextPro }) => {
 
   return (
     <div
-      className="w-full my-36 h-fit relative rounded-3xl"
+      className=" w-11/12 mx-auto p-10 my-36 md:h-[60vh] relative rounded-3xl"
       style={{ backgroundColor: color }}
     >
       <div className="box p-10 grid grid-cols-2 w-full justify-center justify-items-center items-center h-fit">
         <div className="img-section">
           <img
-            className=" w-64 mix-blend-darken"
+            className=" w-1/2 mix-blend-darken"
             src={image}
             alt=""
           />
         </div>
 
         <div className="text-sec">
-          <h1 className=" my-10 text-6xl text-zinc-500 font-bold ">{name}</h1>
+          <h1 className=" my-10 text-6xl text-zinc-500 font-bold font-safari ">{name}</h1>
           <p className=" text-3xl text-gray-400">{title}</p>
-          <p className=" text-sm">{long_details}</p>
+          <p className=" text-sm font-mono">{long_details}</p>
           
         </div>
       </div>
+
+
       <div className="but flex justify-between">
         <div className="nextPre ">
           <button className=" btnn" onClick={nextPro}>Next</button>

@@ -27,7 +27,7 @@ const CustomarCard = ({cus}) =>{
     const {name,image,review,rating,email} = cus 
     const [open,setOpen] = useState(true);
    return(
-     <div className=" grid grid-cols-2 space-y-10 border-l-2 my-4 justify-center ">
+     <div className=" grid grid-cols-2 w-full h-[15vh] space-y-10 border-l-2 my-4 justify-center ">
         <div className="imgSection">
           <img src={image} alt="" />
         </div>
@@ -35,7 +35,7 @@ const CustomarCard = ({cus}) =>{
         <div className="textSection">
           <div className="sss flex w-full justify-between">
           <h1 className=" font-safari my-4">{name}</h1>
-          <button onClick={()=>setOpen(!open)}>+</button>
+          <button onClick={()=>setOpen(!open)} className=" rounded-full text-3xl border-[1px]">{open?'+':'-'}</button>
           </div>
           <div className={open?`hidden`:''}>
              <p className=" text-xs">{review}</p>

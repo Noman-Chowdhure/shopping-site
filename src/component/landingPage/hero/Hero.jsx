@@ -35,7 +35,7 @@ const Hero = () => {
   };
   
   return (
-    <div id="hero" className=" w-full h-full">
+    <div id="hero" className=" w-full h-full overflow-hidden">
       <div
         data-scroll
         data-scroll-speed="-.9"

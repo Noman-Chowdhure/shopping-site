@@ -10,20 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useGSAP(() => {
-  //   gsap.from("#aboutUs", {
-  //     opacity: 0,
-  //     duration: 2.5,
-  //     delay: 2.5,
-  //     scale: 0,
-  //     scrollTrigger: {
-  //       trigger: "#aboutUs",
-  //       scroller: "#aboutUs",
-  //       start: "top 2%",
-  //       end: "top -100%",
-  //     },
-  //   });
-  // }, []);
+  useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: "#aboutUs",
+      pin: "#aboutUs",
+      start: "top center",
+      end: "+=500",
+    });
+  }, []);
 
   const nextItem = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % arrayOfOj.length);

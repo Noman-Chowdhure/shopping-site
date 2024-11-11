@@ -9,7 +9,7 @@ const Landing = () => {
   return (
     <div className=" w-full h-full  overflow-hidden">
       <Hero></Hero>
-      <WinderCollection></WinderCollection>
+      {/* <WinderCollection></WinderCollection> */}
       <AboutUs></AboutUs>
       <Slider></Slider>
       <Clint></Clint>

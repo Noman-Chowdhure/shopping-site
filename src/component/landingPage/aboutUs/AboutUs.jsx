@@ -36,15 +36,15 @@ const AboutUs = () => {
   };
 
   return (
-    <div id="aboutUs" className="w-5/6 mx-auto bg-zinc-800 px-28 py-10">
-      <div className="top-heading border-b-[1px] border-zinc-600">
+    <div id="aboutUs" className="w-5/6 mx-auto px-28 py-10">
+      <div className="top-heading border-b-[1px]">
         <h1 className="text-9xl capitalize font-safari text-zinc-300">
           explore
         </h1>
       </div>
 
       <div className="detils grid grid-cols-2">
-        <div className="counting border-r-[1px] border-zinc-600">
+        <div className="counting border-r-[1px] w-1/2">
           <Counting
             key={arrayOfOj[currentIndex].id}
             details={arrayOfOj[currentIndex].details}

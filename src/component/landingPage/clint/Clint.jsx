@@ -1,58 +1,48 @@
+import { useState } from "react"
+import { clint } from "../../../utils/frienFunction"
 
 const Clint = () => {
   return (
-    <div>
-        <div id="clintBody" className="body w-full h-fit grid grid-cols-2">
-             <p id="clints">clint</p>
-
-            <div className="clintMain grid grid-cols-1 justify-center justify-items-center">
-
-                 <div className="clintChild grid grid-cols-4   justify-center items-center justify-items-center">
-                    <div className="img-sction col-span-2">
-                       <img className=" w-1/2 rounded-3xl aspect-square" src="https://i.pinimg.com/564x/86/9a/bd/869abd703f5957318fe760bfe85b14f8.jpg" alt="" />
-                    </div>
-                    <div className="text-section col-start-4">
-                        <h1 className=" text-5xl font-safari my-5">Alice Johnson</h1>
-                        <p className=" text-lg font-mono ">Wireless Headphones</p>
-                        <p className=" text-sm ">I absolutely love these wireless headphones! The sound quality is top-notch, and they are incredibly comfortable to wear for long periods. The battery life is impressive, lasting me all day. Highly recommend for anyone who enjoys music on the go!</p>
-                        <p>⭐⭐⭐⭐⭐</p>
-                    </div>
-                 </div>
-
-
-                 <div className="clintChild grid grid-cols-4 justify-center items-center justify-items-center">
-                    
-                    <div className="text-section col-start-2">
-                    <h1 className=" text-5xl font-safari my-5">Alice Johnson</h1>
-                        <p className=" text-lg font-mono ">Wireless Headphones</p>
-                        <p className=" text-sm ">I absolutely love these wireless headphones! The sound quality is top-notch, and they are incredibly comfortable to wear for long periods. The battery life is impressive, lasting me all day. Highly recommend for anyone who enjoys music on the go!</p>
-                        <p>⭐⭐⭐⭐⭐</p>
-                    </div>
-                    <div className="img-sction col-start-3">
-                       <img className=" rounded-3xl aspect-square" src="https://i.pinimg.com/736x/fe/ea/ff/feeaff5e2e92cc024447c3e4880d30de.jpg" alt="" />
-                    </div>
-                 </div>
-
-
-
-                 <div className="clintChild grid grid-cols-4 justify-center items-center justify-items-center">
-                    <div className="img-sction col-span-2">
-                       <img className=" w-1/2 rounded-3xl aspect-square" src="https://i.pinimg.com/736x/1b/0b/81/1b0b81916c78b6d0ad0318583284694b.jpg" alt="" />
-                    </div>
-                    <div className="text-section col-start-4">
-                    <h1 className=" text-5xl font-safari my-5">Alice Johnson</h1>
-                        <p className=" text-lg font-mono ">Wireless Headphones</p>
-                        <p className=" text-sm ">I absolutely love these wireless headphones! The sound quality is top-notch, and they are incredibly comfortable to wear for long periods. The battery life is impressive, lasting me all day. Highly recommend for anyone who enjoys music on the go!</p>
-                        <p>⭐⭐⭐⭐⭐</p>
-                    </div>
-                 </div>
-
-
-            </div>
-
+    <div className=" relative">
+      <img className=" absolute top-1/2 w-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 " src="https://i.pinimg.com/originals/ba/3d/73/ba3d738757089a28da691cf46235428b.gif" alt="" />
+        <div id="clintBody" className="body w-4/5 m-auto h-fit grid grid-cols-2 gap-x-20">
+             <div className="clintHeading col-span-1">
+                <h1 className=" text-7xl font-medium font-safari capitalize ">what our customers says..?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatibus ipsum placeat, quod modi iure perferendis fugiat mollitia cum quasi. Doloribus consectetur atque nisi sed voluptatibus nobis dicta soluta deserunt.</p>
+                <button  className=" btnn">see more</button>
+             </div>
+             <div className="customar">
+                {clint.slice(0,3).map(abc  => <CustomarCard key={abc.id} cus={abc}></CustomarCard> )}
+             </div>
         </div>
+        
     </div>
   )
 }
 
+
 export default Clint
+
+const CustomarCard = ({cus}) =>{
+    const {name,image,review,rating,email} = cus 
+    const [open,setOpen] = useState(true);
+   return(
+     <div className=" grid grid-cols-2 space-y-10 border-l-2 my-4 justify-center ">
+        <div className="imgSection">
+          <img src={image} alt="" />
+        </div>
+
+        <div className="textSection">
+          <div className="sss flex w-full justify-between">
+          <h1 className=" font-safari my-4">{name}</h1>
+          <button onClick={()=>setOpen(!open)}>+</button>
+          </div>
+          <div className={open?`hidden`:''}>
+             <p className=" text-xs">{review}</p>
+             <p className=" text-orange-400">{rating}</p>
+             <p className=" underline">{email}</p>
+          </div>
+        </div>
+     </div>
+   )
+}

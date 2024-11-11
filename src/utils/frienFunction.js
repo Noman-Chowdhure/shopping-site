@@ -106,76 +106,56 @@ export  const arrayOfOj = [
   
   ]
 
-  export const clint = [
+  export const clint =[
     {
-      clientName: "Alice Johnson",
-      id: 1,
-      product: "Wireless Headphones",
-      review: "I absolutely love these wireless headphones! The sound quality is top-notch, and they are incredibly comfortable to wear for long periods. The battery life is impressive, lasting me all day. Highly recommend for anyone who enjoys music on the go!",
-      rating: "⭐⭐⭐⭐⭐"
+      "id": 1,
+      "name": "Alice Johnson",
+      "review": "Excellent service! The product exceeded my expectations, and the delivery was fast. Highly recommend!",
+      "rating": "★★★★★",
+      "email": "alice.johnson@email.com",
+      "image": "https://example.com/images/alice-johnson.jpg"
     },
     {
-      clientName: "Bob Smith",
-      id: 2,
-      product: "Smartphone Case",
-      review: "This smartphone case is perfect for my needs. It’s sturdy enough to protect my phone from drops while still being slim and lightweight. The design is stylish, and it fits my phone like a glove. Overall, I’m very satisfied with this purchase!",
-      rating: "⭐⭐⭐⭐"
+      "id": 2,
+      "name": "Bob Smith",
+      "review": "I’ve been a customer for years, and they always deliver quality. Customer support is fantastic too!",
+      "rating": "★★★★★",
+      "email": "bob.smith@email.com",
+      "image": "https://example.com/images/bob-smith.jpg"
     },
     {
-      clientName: "Carol Williams",
-      id: 3,
-      product: "Fitness Tracker",
-      review: "I’ve been using this fitness tracker for a few weeks now, and it has truly changed my workout routine. It tracks my steps, heart rate, and even my sleep patterns. The app that comes with it is user-friendly and provides great insights. I feel more motivated than ever to stay active!",
-      rating: "⭐⭐⭐⭐⭐"
+      "id": 3,
+      "name": "Carla Davis",
+      "review": "Great product and great customer service. They went above and beyond to help me with my order.",
+      "rating": "★★★★☆",
+      "email": "carla.davis@email.com",
+      "image": "https://example.com/images/carla-davis.jpg"
     },
     {
-      clientName: "David Brown",
-      id: 4,
-      product: "Coffee Maker",
-      review: "This coffee maker is a game changer! It brews the best coffee I’ve ever tasted at home. The programmable settings allow me to wake up to freshly brewed coffee every morning. Cleanup is easy too, which is a huge plus for me. I can't imagine my mornings without it!",
-      rating: "⭐⭐⭐⭐⭐"
+      "id": 4,
+      "name": "David Lee",
+      "review": "Fast shipping and the product quality is amazing! Will definitely order again.",
+      "rating": "★★★★★",
+      "email": "david.lee@email.com",
+      "image": "https://example.com/images/david-lee.jpg"
     },
     {
-      clientName: "Emma Wilson",
-      id: 5,
-      product: "Bluetooth Speaker",
-      review: "I’ve enjoyed using this Bluetooth speaker for outdoor gatherings. The sound quality is impressive for its size, and it’s surprisingly loud. However, I wish the battery life was a bit longer; I find myself recharging it more often than I’d like. Still, it’s a great buy for the price!",
-      rating: "⭐⭐⭐"
+      "id": 5,
+      "name": "Emma Thompson",
+      "review": "I’m very happy with my purchase! The website is easy to navigate, and my order arrived right on time.",
+      "rating": "★★★★☆",
+      "email": "emma.thompson@email.com",
+      "image": "https://example.com/images/emma-thompson.jpg"
     },
     {
-      clientName: "Frank Garcia",
-      id: 6,
-      product: "Laptop Stand",
-      review: "This laptop stand has improved my work-from-home setup significantly. It raises my laptop to eye level, which has helped with my posture during long work hours. The build quality feels sturdy, and it’s adjustable to different angles, which is a nice feature. Highly recommend!",
-      rating: "⭐⭐⭐⭐"
-    },
-    {
-      clientName: "Grace Lee",
-      id: 7,
-      product: "Yoga Mat",
-      review: "I’m very pleased with this yoga mat! It provides excellent grip, even during my sweatiest sessions, and the cushioning is just right for my knees. It’s also lightweight and easy to carry around. This mat has truly enhanced my yoga practice!",
-      rating: "⭐⭐⭐⭐⭐"
-    },
-    {
-      clientName: "Henry Martinez",
-      id: 8,
-      product: "Electric Kettle",
-      review: "This electric kettle boils water quickly and efficiently. I love the automatic shut-off feature, which gives me peace of mind when I’m distracted. The design is sleek, and it’s easy to pour without spilling. Perfect for making tea or instant meals!",
-      rating: "⭐⭐⭐⭐"
-    },
-    {
-      clientName: "Ivy Chen",
-      id: 9,
-      product: "Camera Tripod",
-      review: "This tripod is fantastic for my photography needs. It’s sturdy and easy to adjust, providing great stability for my camera. The quick-release plate is a nice touch, making it easy to switch between shots. I’m thrilled with my purchase and highly recommend it to fellow photographers!",
-      rating: "⭐⭐⭐⭐⭐"
-    },
-    {
-      clientName: "Jack Taylor",
-      id: 10,
-      product: "Air Fryer",
-      review: "I can’t say enough good things about this air fryer! It cooks food evenly and gives everything a crispy texture without all the oil. I’ve made fries, chicken, and even veggies, and they all turn out delicious. Cleaning it is a breeze as well. A must-have for anyone who loves cooking!",
-      rating: "⭐⭐⭐⭐⭐"
+      "id": 6,
+      "name": "Frank Williams",
+      "review": "Perfect! Everything arrived as promised, and the quality is top-notch. Customer service was very helpful as well.",
+      "rating": "★★★★★",
+      "email": "frank.williams@email.com",
+      "image": "https://example.com/images/frank-williams.jpg"
     }
   ]
+  
+  
   

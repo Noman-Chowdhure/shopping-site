@@ -28,9 +28,10 @@ const ProductDetils = () => {
      })
   };
   return (
-    <div className=" grid grid-cols-2 w-full h-screen justify-center  items-center justify-items-center gap-4 ">
-      <div className="fuck">
+    <div className=" grid grid-cols-1 w-full h-screen justify-center  items-center justify-items-center gap-4 ">
+      <div className="fuck absolute">
         <img className=" mix-blend-darken  w-2/1 mx-auto" src={image} alt="" />
+        <p className="product_ditails">{category}</p>
       </div>
       <div className=" space-y-4">
         <p>{title}</p>

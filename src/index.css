@@ -43,8 +43,8 @@
   bottom: -100px;
 }
 #windter {
-  background-color: rgba(240, 248, 255, 0.278);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.076);
+  backdrop-filter: blur(50px);
 }
 #heros {
   writing-mode: tb-rl;
@@ -89,3 +89,5 @@
   text-shadow: 2px 13px 12px rgb(230, 230, 230);
   transform: rotate(0deg);
 }
+
+

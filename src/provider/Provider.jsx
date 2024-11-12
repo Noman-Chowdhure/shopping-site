@@ -26,12 +26,16 @@ const Provider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+   const samraUser =  onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       }
     });
+    return ()=>{
+      return samraUser()
+    }
   }, []);
 
   const googleLog = () => {

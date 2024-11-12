@@ -12,10 +12,7 @@
   scale: 1.1;
   transition: 1s ease-out;
 }
-#form-body {
-  background: rgba(92, 91, 91, 0.186);
-  backdrop-filter: blur(10px);
-}
+
 
 #productsHeading {
   text-transform: capitalize;

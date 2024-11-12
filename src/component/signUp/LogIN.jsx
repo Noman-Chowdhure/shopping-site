@@ -24,16 +24,13 @@ const LogIN = () => {
 
   return (
     <div className="w-full h-screen grid justify-center items-center">
-      <img
-        className=" absolute -z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-3xl w-2/3 h-2/3"
-        src="https://i.pinimg.com/564x/44/0c/ef/440cef314f679adba15d7047c47c3661.jpg"
-        alt=""
-      />
+   
       <div
         id="form-body"
         className="body rounded-3xl w-2/3 h-fit p-24  mx-auto grid grid-cols-2 justify-center justify-items-center items-center gap-6"
       >
         <div className="form_section w-full">
+          <h1 className=" text-5xl capitalize my-8 font-safari">login - here</h1>
           <form
             onSubmit={onSubmit}
             className="grid w-full grid-cols-1 space-y-5"
@@ -43,7 +40,7 @@ const LogIN = () => {
               name="email"
               id="email"
               placeholder="email here--"
-              className="w-full border-b-[1px] border-zinc-300 text-orange-50 outline-none bg-transparent ps-6" // Removed h-full
+              className="w-full border-b-[1px] border-zinc-300  outline-none bg-transparent ps-6" // Removed h-full
             />
 
             <div className="passwo flex">
@@ -52,7 +49,7 @@ const LogIN = () => {
                 name="password"
                 id="password"
                 placeholder="password here--"
-                className="w-full border-b-[1px] border-zinc-200 outline-none text-orange-50  bg-transparent ps-6" // Changed to password for better UX
+                className="w-full border-b-[1px] border-zinc-200 outline-none   bg-transparent ps-6" // Changed to password for better UX
               />
               <div className="btn_box">
                 <button onClick={() => setSee(!see)}>
@@ -97,7 +94,7 @@ const LogIN = () => {
             </div>
             <input
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded"
+              className="w-full bg-blue-300 text-white py-2 rounded"
             />
           </form>
           <Link to="/signUp">dont.t have any accout yet..</Link>

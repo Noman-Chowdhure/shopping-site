@@ -6,11 +6,13 @@ import ProductDetils from "./component/shreadPage/ProductDetils";
 import LogIN from "./component/signUp/LogIN";
 import SignUp from "./component/signUp/SignUp";
 import Layout from "./layout/Layout";
+import Errors from "./component/errorPage/Errors";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement:<Errors></Errors>,
     children: [
       { path: "/", element: <Landing></Landing> },
       { path: "/product", element: <Products></Products> },

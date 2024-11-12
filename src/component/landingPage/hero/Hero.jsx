@@ -50,7 +50,7 @@ const Hero = () => {
           />
 
           <p id="heros" className=" text-zinc-400 md:text-[20vw] text-[5vw]">
-            ari fode max
+            ari pode max
           </p>
         </div>
 

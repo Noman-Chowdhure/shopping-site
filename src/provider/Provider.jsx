@@ -30,7 +30,6 @@ const Provider = ({ children }) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        // ...
       }
     });
   }, []);

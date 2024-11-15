@@ -39,7 +39,7 @@ const SliderCard = ({ nam, index,nextPro }) => {
         </div>
 
         <div className="text-sec">
-          <h1 className=" my-10 text-6xl text-zinc-500 font-bold font-safari ">{name}</h1>
+          <h1 className=" my-10 text-6xl text-zinc-500 font-bold  font-PT ">{name}</h1>
           <p className=" text-3xl text-gray-400">{title}</p>
           <p className=" text-sm font-mono">{long_details}</p>
           

@@ -3,7 +3,7 @@ import React from 'react'
 const Heros = () => {
   return (
     <div className=' w-full h-fit'>
-        <div className="mainn bg-slate-100  w-11/12 mx-auto my-24 p-20 rounded-tl-3xl rounded-tr-3xl grid grid-cols-3">
+        <div className="mainn   w-11/12 mx-auto my-24 p-20 rounded-tl-3xl rounded-tr-3xl grid grid-cols-3">
             <div className="text-content col-span-2 grid grid-cols-2 justify-center items-center">
                 <div className="img">
                     <img className=' mix-blend-darken w-2/3' src="https://i.pinimg.com/736x/bb/a2/80/bba28098e209c1ce822b98988b913ae9.jpg" alt="" />

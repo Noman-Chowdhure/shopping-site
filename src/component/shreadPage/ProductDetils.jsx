@@ -1,3 +1,4 @@
+import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const ProductDetils = () => {
@@ -24,8 +25,15 @@ const ProductDetils = () => {
     })
       .then((res) => res.json())
       .then((informat) => {
-        console.log(informat);
+       if(informat.insertedId)
+         {
+          toast.success('product added..')
+         }
+        else{
+          toast.error("plzz try again..")
+        } 
       });
+
   };
   return (
     <div className=" grid grid-cols-3 w-full px-10 h-screen justify-center justify-items-center items-center gap-4 ">
@@ -77,6 +85,7 @@ const ProductDetils = () => {
         </div>
         <button onClick={handleCart} className=" btnn capitalize">
           add to cart..
+          <Toaster></Toaster>
         </button>
       </div>
     </div>

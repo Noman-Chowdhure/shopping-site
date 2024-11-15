@@ -17,6 +17,15 @@ const AboutUs = () => {
       start: "top center",
       end: "+=500",
     });
+    const time = gsap.timeline()
+    time.from("#explo",{
+      scale:1.4,
+      duration:2,
+      y:400,
+      x:150,
+      opacity:0
+    })
+
   }, []);
 
   const nextItem = () => {
@@ -32,7 +41,7 @@ const AboutUs = () => {
   return (
     <div id="aboutUs" className="w-5/6 mx-auto px-28 py-10">
       <div className="top-heading border-b-[1px]">
-        <h1 className="text-9xl capitalize font-safari text-zinc-300">
+        <h1 className="text-9xl capitalize text-zinc-300">
           explore
         </h1>
       </div>

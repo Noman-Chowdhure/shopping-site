@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Qwitcher+Grypen:wght@400;700&display=swap');
 .btnn {
   @apply border-[1px] border-zinc-700 rounded-full px-5 py-1;
 }

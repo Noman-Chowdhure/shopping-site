@@ -26,30 +26,29 @@ const Provider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-
   useEffect(() => {
-   const samraUser =  onAuthStateChanged(auth, (user) => {
+    const samraUser = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       }
     });
-    return ()=>{
-      return samraUser()
-    }
+    return () => {
+      return samraUser();
+    };
   }, []);
 
   const googleLog = () => {
     return signInWithPopup(auth, googleProvider);
   };
-  const logOut = () =>{
-    signOut(auth)
-  }
+  const logOut = () => {
+    signOut(auth);
+  };
   const userinfo = {
     user,
     createUser,
     signINUser,
     googleLog,
-    logOut
+    logOut,
   };
   return (
     <AuthContext.Provider value={userinfo}>{children}</AuthContext.Provider>

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-         safari:"'Itim',cursive"
+         safari:"'Itim',cursive",
+         PT:"'PT Serif',serif"
       }
     },
   },

@@ -10,6 +10,7 @@ const AddCart = () => {
 
   return (
     <div className=" w-full h-screen grid grid-cols-1 justify-center justify-items-center items-center">
+      <h1>my cart ...</h1>
       <div className=" w-full">
         {userCart.map((abc) => (
           <UserData key={abc.id} sama={abc}></UserData>
@@ -20,14 +21,14 @@ const AddCart = () => {
 };
 
 const UserData = ({ sama }) => {
-  const { name, image, color, price, id } = sama;
+  const { name, image, color, price, _id } = sama;
   const handleDelet = (id) => {
     fetch(`http://localhost:5000/informa/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(id),
+
     })
       .then((res) => res.json())
       .then((dataa) => {
@@ -37,25 +38,29 @@ const UserData = ({ sama }) => {
 
   const [total, setTotal] = useState(0);
   const [count, setCount] = useState(0);
-  const totalPrice = (plus) => {
+  const addedPrice = (plus) => {
     setTotal(parseInt(total + plus));
     setCount((cosut) => cosut + 1);
   };
+  const removePrice = (minus) =>{
+    setTotal(parseInt(total - minus));
+    setCount((cosut) => cosut - 1)
+  };
   return (
     <div>
-      <div className="saraDhon grid w-full h-full justify-center  grid-cols-3">
-        <div className="products col-span-2">
-          <div className=" w-full h-full grid grid-cols-5 items-center justify-center gap-4">
-            <img className=" w-24 m-auto mix-blend-darken" src={image} alt="" />
-            <h1 className=" font-safari text-lg capitalize ">{name}</h1>
+      <div className="saraDhon">
+        <div className="products grid grid-cols-2 col-span-2">
+          <div className=" w-full grid grid-cols-5 items-center justify-center gap-4">
+            <img className="w-20 m-auto mix-blend-darken" src={image} alt="" />
+            <h1 className=" font-safari text-sm capitalize ">{name}</h1>
 
             <div className="counting_bx flex justify-between w-full btnn">
-              <button onClick={() => totalPrice(price)}>+</button>
+              <button onClick={() => addedPrice(price)}>+</button>
               <p>{count}</p>
-              <button>-</button>
+              <button onClick={()=> removePrice(price)}>-</button>
             </div>
             <p className=" text-lg font-mono lowercase">${total}</p>
-            <button onClick={() => handleDelet(id)}>
+            <button onClick={() => handleDelet(_id)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,6 +76,9 @@ const UserData = ({ sama }) => {
                 />
               </svg>
             </button>
+          </div>
+          <div className="user_data">
+
           </div>
         </div>
       </div>

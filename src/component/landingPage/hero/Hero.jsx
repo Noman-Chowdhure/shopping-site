@@ -49,7 +49,7 @@ const Hero = () => {
             alt=""
           />
 
-          <p id="heros" className=" text-zinc-400 md:text-[20vw] text-[5vw]">
+          <p id="heros" className=" text-zinc-400 md:text-[20vw] font-PT text-[5vw]">
             ari pode max
           </p>
         </div>

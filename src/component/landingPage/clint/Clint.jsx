@@ -4,7 +4,6 @@ import { clint } from "../../../utils/frienFunction"
 const Clint = () => {
   return (
     <div className=" relative">
-      <img className=" absolute top-1/2 w-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 " src="https://i.pinimg.com/originals/ba/3d/73/ba3d738757089a28da691cf46235428b.gif" alt="" />
         <div id="clintBody" className="body w-4/5 m-auto h-fit grid grid-cols-2 gap-x-20">
              <div className="clintHeading col-span-1">
                 <h1 className=" text-7xl font-medium font-safari capitalize ">what our customers says..?</h1>

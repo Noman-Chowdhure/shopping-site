@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 const ShowPis = () => {
   return (
     <motion.div
-      initial={{ backgroundColor: "" }}
-      whileInView={{ backgroundColor: "black" }}
+      initial={{ scale:0.7 }}
+      whileHover={{scale:1.0 }}
       transition={{
-        duration: 3,
+        duration: 2,
       }}
     >
       <div className="bdy grid grid-cols-5 gap-10 w-full h-fit">
+
         <div className="child col-span-3 grid grid-cols-2 justify-center justify-items-center items-center bg-slate-50 rounded-[40px]">
           <div className="text-content space-y-5 w-1/2">
             <h1 className=" font-PT uppercase text-4xl">gear</h1>

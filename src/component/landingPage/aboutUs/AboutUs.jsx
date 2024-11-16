@@ -10,23 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: "#aboutUs",
-      pin: "#aboutUs",
-      start: "top center",
-      end: "+=500",
-    });
-    const time = gsap.timeline()
-    time.from("#explo",{
-      scale:1.4,
-      duration:2,
-      y:400,
-      x:150,
-      opacity:0
-    })
-
-  }, []);
 
   const nextItem = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % arrayOfOj.length);

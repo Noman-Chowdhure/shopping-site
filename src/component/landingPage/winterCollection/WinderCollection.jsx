@@ -1,38 +1,23 @@
+import { motion } from 'framer-motion';
+
 const WinderCollection = () => {
   return (
-    <div id="windter" className=" w-full h-full p-10 md:py-20">
-      <h1 className=" text-center text-3xl my-10 py-10 md:text-9xl font-semibold  uppercase font-safari ">
-        our top popular product for you
-      </h1>
-
-      <div className="card w-2/2 mx-auto grid grid-cols-5 justify-center gap-x-20 justify-items-center ">
-        <div className="cardChild bg-slate-100 rounded-3xl w-full p-4">
-          <img
-            className=" mix-blend-darken"
-            src="https://i.pinimg.com/564x/04/4b/76/044b7680f1424b61465cb458dae11919.jpg"
-            alt=""
-          />
-        </div>
-        <div className="cardChild bg-slate-200 rounded-3xl w-full p-4">
-          <h1>afifa</h1>
-        </div>
-        <div
-          id="sara"
-          className="cardChild bg-slate-100 rounded-3xl w-full p-4"
-        >
-          <img
-            className=" mix-blend-darken"
-            src="https://i.pinimg.com/564x/bb/6e/1f/bb6e1f3423b534e347c5cde967d5c1f3.jpg"
-            alt=""
-          />
-        </div>
-        <div className="cardChild bg-slate-200 rounded-3xl w-full p-4">
-          <h1>depeka</h1>
-        </div>
-        <div className="cardChild bg-slate-200 rounded-3xl w-full p-4">
-          <h1>depeka</h1>
-        </div>
-      </div>
+    <div
+      id="windter"
+      className="w-full h-full p-10 md:py-20 overflow-hidden" // Added overflow-hidden to hide out-of-view content
+    >
+      <motion.h1
+        className="text-9xl font-PT uppercase"
+        initial={{ x: '100%' }}  // Start off-screen to the right
+        animate={{ x: '-100%' }} // Move to the left off-screen
+        transition={{
+          duration: 10, // Increased duration for a slower animation
+          ease: 'easeInOut', // Smoother easing function
+          repeat: Infinity, // Continuous repeat
+        }}
+      >
+        our top <span className="font-semibold text-zinc-300 capitalize text-[12vw]">popular</span> product for <span className="font-semibold text-zinc-300 capitalize text-[12vw]">you</span>
+      </motion.h1>
     </div>
   );
 };

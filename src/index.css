@@ -8,6 +8,11 @@
   @apply border-[1px] border-zinc-700 rounded-full px-5 py-1;
 }
 
+body
+{
+  overflow-x: hidden;
+}
+
 #samar_card:hover {
   scale: 1.1;
   transition: 1s ease-out;
@@ -88,3 +93,9 @@
 }
 
 
+.sama :nth-child(2n + 2)
+{
+  position: relative;
+  left: -20%;
+
+}

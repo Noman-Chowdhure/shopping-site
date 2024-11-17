@@ -36,7 +36,7 @@ const ProductDetils = () => {
 
   };
   return (
-    <div className=" grid grid-cols-3 w-full px-10 h-screen justify-center justify-items-center items-center gap-4 ">
+    <div className=" grid grid-cols-3 font-PT capitalize w-full px-10 h-screen justify-center justify-items-center items-center gap-4 ">
       <div className=" space-y-4">
         <p>{title}</p>
         <h1 className=" text-5xl capitalize font-safari ">{name}</h1>
@@ -48,7 +48,7 @@ const ProductDetils = () => {
       <div className="detils space-y-10">
         <div className="sixe space-y-5">
           <p>size</p>
-          <p className=" w-full">{available_size.map((aaa) => <a className=" p-4 m-2 border-2 rounded-full">{aaa}</a>)}</p>
+          <p className=" w-full">{available_size.map((aaa) => <a className=" px-4 m-2 border-2 rounded-full">{aaa}</a>)}</p>
         </div>
         <div className="flex justify-between">
           <p>price</p>

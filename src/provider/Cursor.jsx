@@ -27,8 +27,8 @@ const Cursor = ({ children }) => {
     <CursorProvider.Provider value={sama}>
       <div
         id="cursor"
-        className="w-14 h-14 bg-red-500 rounded-full fixed pointer-events-none"
-        style={{ transform: 'translate(-50%, -50%)' }} // Centers the cursor
+        className="w-4 h-4 bg-zinc-900 z-50 rounded-full fixed pointer-events-none"
+        style={{ transform: 'translate(-50%, -50%)' }} 
       ></div>
       {children}
     </CursorProvider.Provider>

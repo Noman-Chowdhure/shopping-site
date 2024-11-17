@@ -1,6 +1,9 @@
-import React from "react";
-
+import { motion } from "framer-motion";
 const Why = () => {
+  const variants = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+  };
   return (
     <div className=" border-t-2 rounded-tl-3xl rounded-tr-3xl p-10">
       <div className="fast_section my-44">
@@ -37,9 +40,17 @@ const Why = () => {
           </h1>
         </div>
       </div>
+
       <div className="last_section ">
         <div className="parent grid gap-x-10 grid-cols-3">
-          <div className="child bg-gray-100 rounded-3xl p-10">
+          <motion.div
+            initial={{ opacity: 0, y: 400 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+            }}
+            className="child bg-gray-100 rounded-3xl p-10"
+          >
             <div className="num w-20 h-20 border-[1px] rounded-full grid justify-center items-center">
               <p className=" text-2xl font-semibold">01</p>
             </div>
@@ -55,9 +66,17 @@ const Why = () => {
                 hign internal <br /> quality control
               </h1>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="child bg-gray-100 rounded-3xl p-10">
+          <motion.div
+            initial={{ opacity: 0, y: 400 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+            }}
+            className="child bg-gray-100 rounded-3xl p-10"
+          >
             <div className="text">
               <h1 className=" text-4xl  capitalize">
                 support 24/7 for <br /> uniterrupted operation
@@ -74,9 +93,17 @@ const Why = () => {
             <div className="num w-20 h-20 border-[1px] rounded-full grid justify-center items-center">
               <p className=" text-2xl font-semibold">02</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="child bg-gray-100 rounded-3xl p-10">
+          <motion.div
+            initial={{ opacity: 0, y: 400 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.9,
+            }}
+            className="child bg-gray-100 rounded-3xl p-10"
+          >
             <div className="num w-20 h-20 border-[1px] rounded-full grid justify-center items-center">
               <p className=" text-2xl font-semibold">03</p>
             </div>
@@ -89,10 +116,11 @@ const Why = () => {
             </div>
             <div className="text">
               <h1 className=" text-4xl  capitalize">
-                experience certified in <br /> many technologies and methodologies
+                experience certified in <br /> many technologies and
+                methodologies
               </h1>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
   
-    <div className=" absolute z-30 w-full h-fit my-4 grid grid-cols-3 justify-center justify-items-center">
+    <div className=" z-30 w-full h-fit my-4 grid grid-cols-3 justify-center justify-items-center">
       <div className="login">
         {user?(<button onClick={logOut}>logOut</button>):  <Link to='/login'>
           <svg

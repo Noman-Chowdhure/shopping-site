@@ -8,6 +8,7 @@ import ProductDetils from "./component/shreadPage/ProductDetils";
 import LogIN from "./component/signUp/LogIN";
 import SignUp from "./component/signUp/SignUp";
 import Layout from "./layout/Layout";
+import Contact from "./component/contactPage/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         element: <AddCart></AddCart>,
         loader: () => fetch("http://localhost:5000/informa"),
       },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
+      }
     ],
   },
   {

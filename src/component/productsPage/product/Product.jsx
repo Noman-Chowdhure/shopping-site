@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../../shreadPage/ProductCard";
 import Eyes from "../../shreadPage/Eyes";
 import ShowPis from "../showPis/ShowPis";
-gsap.registerPlugin(ScrollTrigger);
+
 
 const Product = () => {
   const [items, setItems] = useState([]);
@@ -23,13 +23,15 @@ const Product = () => {
         setItems(OverEar.slice(0, 10));
         setItemss(InEar.slice(0, 10));
       });
+
+  
   }, []);
 
   return (
     <div>
 
       <h1 id="productsHeading">our product</h1>
-      <div className="sama grid grid-cols-3 gap-4 justify-center justify-items-center w-2/3 mx-auto">
+        <div className="sama grid grid-cols-1 gap-4 justify-center justify-items-center w-2/3 mx-auto">
         {items.map((abc) => (
           <ProductCard key={abc.id} item={abc}></ProductCard>
         ))}
